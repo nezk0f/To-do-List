@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="card mt-5">
+            <h3 class="card-header">Add To-Do</h3>
+            <div class="card-body">
+                <form id="todoAddForm">
+                    <input type="text" id="todoInput" class="form-control" placeholder="New todo">
+                    <button type="submit" class="btn btn-primary btn-sm mt-3">Add todo</button>
+                </form>
+            </div>
+            <hr>
+            <div class="card-body">
+                <h3 class="card-header">To-Do List</h3>
+                <form id = "todoListForm">
+                    <input type="text" id="todoSearch" class="form-control" placeholder="Search todo">
+                    <hr>
+                </form>
+                <ul class="todoList">
+                </ul>
+                <button id="clearbtn" class="btn btn-primary btn-sm mt-3">Clear all todos</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
