@@ -17,6 +17,28 @@ function runEvents() {
 
 }
 
+function addTodo(e) {
+    const newInput = addInput.value.trim()
+
+    if(newInput === null || newInput === "") {
+        showAlert("warning","Please enter a todo before adding it.")
+    }
+    else {
+        addTodoToUI(newInput)
+        addTodoToStorage(newInput)
+        showAlert("success","Todo added successfully!")
+    }
+
+    e.preventDefault()
+}
+
+function pageLoaded() {
+    getTodosFromStorage();
+    todos.forEach(function(todo) {
+        addTodoToUI(todo)
+    })
+}
+
 function clearAllTodos() {
     const allTodo = document.querySelectorAll(".list-group-item")
     if(allTodo.length>0) {
